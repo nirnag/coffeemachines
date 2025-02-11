@@ -192,7 +192,7 @@ export default function CoffeeMachineQuiz() {
   };
 
   const getRecommendations = () => {
-    const key = ${answers.experience}-${answers.time}-${answers.budget};
+    const key = `${answers.experience}-${answers.time}-${answers.budget}`;
     return recommendations[key] || {
       machines: [{
         name: "לא נמצאו המלצות מדויקות",
@@ -254,9 +254,9 @@ export default function CoffeeMachineQuiz() {
           {questions.map((_, idx) => (
             <div
               key={idx}
-              className={h-2 flex-1 mx-1 rounded ${
+              className={`h-2 flex-1 mx-1 rounded ${
                 idx <= step ? 'bg-blue-600' : 'bg-gray-200'
-              }}
+              }`}
             />
           ))}
         </div>
