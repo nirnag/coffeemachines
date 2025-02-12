@@ -3,138 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>סקר בחירת מכונת קפה</title>
+    <title>סקר לבחירת מכונת קפה</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        label, .option {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .option {
-            display: block;
-        }
-        select, input[type="radio"] {
-            margin-right: 10px;
-        }
-        .submit-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: center; }
+        .question, .result { display: none; }
+        button { margin-top: 10px; padding: 10px; font-size: 16px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>סקר בחירת מכונת קפה</h1>
-        <form>
-            <!-- שאלות -->
-            <label for="coffeeType">איזה סוג קפה אתה אוהב?</label>
-            <select id="coffeeType" name="coffeeType">
-                <option value="automatic">מכונה אוטומטית</option>
-                <option value="semiAutomatic">מכונה חצי אוטומטית</option>
-                <option value="manual">מכונה ידנית</option>
-            </select>
-            <br><br>
-
-            <label for="enjoyment">איך אתה נהנה להכין את הקפה שלך?</label>
-            <input type="radio" id="simple" name="enjoyment" value="simple">
-            <label for="simple">פשוט ולא מסובך</label>
-            <input type="radio" id="littleEffort" name="enjoyment" value="littleEffort">
-            <label for="littleEffort">הכנה פשוטה אבל עם תשומת לב</label>
-            <input type="radio" id="experts" name="enjoyment" value="experts">
-            <label for="experts">אני מקדיש זמן להכנה ואוהב את התהליך</label>
-            <br><br>
-
-            <label for="grinderChoice">האם תבחר במטחנה חיצונית?</label>
-            <input type="radio" id="grinderYes" name="grinder" value="yes">
-            <label for="grinderYes">כן</label>
-            <input type="radio" id="grinderNo" name="grinder" value="no">
-            <label for="grinderNo">לא</label>
-            <br><br>
-
-            <!-- אופציות בהתאם לבחירות -->
-            <div id="machineOptions" style="display:none;">
-                <h3>מכונות קפה אוטומטיות</h3>
-                <div class="option">
-                    <label>Pascale Life & Fun - 1,500 ₪</label>
-                    <p>קומפקטית לאספרסו, בלי מקציף חלב, מיכל קפה 100ג', 5 רמות טחינה.</p>
-                </div>
-                <div class="option">
-                    <label>Philips OMNIA EP2220/10 - 1,500 ₪</label>
-                    <p>מקציף קיטור בסיסי, 12 דרגות טחינה, מיכל פולים 275ג'.</p>
-                </div>
-                <div class="option">
-                    <label>Delonghi Magnifica S ECAM - 1,900 ₪</label>
-                    <p>עם מקציף קיטור, 13 מצבי טחינה, מיכל פולים 250ג'.</p>
-                </div>
-                <!-- Add other machines here... -->
-            </div>
-
-            <div id="grinderOptions" style="display:none;">
-                <h3>מטחנות קפה</h3>
-                <div class="option">
-                    <label>מטחנת קפה Delonghi KG79 - 350 ₪</label>
-                    <p>חשמלית, 16 דרגות טחינה, סכינים שטוחות.</p>
-                </div>
-                <div class="option">
-                    <label>מטחנת קפה Melitta Molino - 500 ₪</label>
-                    <p>חשמלית, 17 דרגות טחינה, סכינים שטוחות.</p>
-                </div>
-                <div class="option">
-                    <label>מטחנת קפה Breville BCG820BSS - 1,500 ₪</label>
-                    <p>חשמלית, 60 דרגות טחינה, סכינים קוניות.</p>
-                </div>
-                <!-- Add other grinders here... -->
-            </div>
-
-            <button type="submit" class="submit-btn">שלח תשובות</button>
-        </form>
+    <h1>סקר לבחירת מכונת קפה</h1>
+    <div id="survey">
+        <div class="question" id="q1">
+            <p>כמה אני אוהב את תהליך הכנת הקפה?</p>
+            <button onclick="answer(1, 'ידני')">ידני - אני אוהב לשלוט בכל שלב</button>
+            <button onclick="answer(1, 'חצי אוטומטי')">חצי אוטומטי - איזון בין נוחות לשליטה</button>
+            <button onclick="answer(1, 'אוטומטי')">אוטומטי - רק ללחוץ על כפתור</button>
+        </div>
+        <div class="question" id="q2">
+            <p>כמה חשוב לי איכות מקציף החלב במכונה?</p>
+            <button onclick="answer(2, 'חיוני')">חיוני - אני חייב קצף איכותי</button>
+            <button onclick="answer(2, 'נחמד שיש')">נחמד שיש, אבל לא חובה</button>
+            <button onclick="answer(2, 'לא קריטי')">לא קריטי - אני לא משתמש בחלב מוקצף</button>
+        </div>
+        <div class="question" id="q3">
+            <p>מה הטווח מחירים?</p>
+            <button onclick="answer(3, 'עד 1000₪')">עד 1000₪</button>
+            <button onclick="answer(3, '1000₪-3000₪')">1000₪-3000₪</button>
+            <button onclick="answer(3, '3000₪ ומעלה')">3000₪ ומעלה</button>
+        </div>
+    </div>
+    <div class="result" id="result">
+        <h2>המכונות שמתאימות לך:</h2>
+        <p id="choices"></p>
+        <button onclick="restart()">נסה שוב</button>
     </div>
 
     <script>
-        const coffeeTypeSelect = document.getElementById("coffeeType");
-        const grinderYesRadio = document.getElementById("grinderYes");
-        const machineOptionsDiv = document.getElementById("machineOptions");
-        const grinderOptionsDiv = document.getElementById("grinderOptions");
+        let currentQuestion = 1;
+        let answers = {};
+        const questions = document.querySelectorAll('.question');
+        const resultDiv = document.getElementById('result');
+        const choicesDiv = document.getElementById('choices');
+        
+        function startSurvey() {
+            questions[0].style.display = 'block';
+        }
 
-        coffeeTypeSelect.addEventListener("change", function() {
-            if (coffeeTypeSelect.value === "automatic" || coffeeTypeSelect.value === "semiAutomatic") {
-                machineOptionsDiv.style.display = "block";
+        function answer(question, choice) {
+            answers[question] = choice;
+            questions[question - 1].style.display = 'none';
+            if (question < questions.length) {
+                questions[question].style.display = 'block';
             } else {
-                machineOptionsDiv.style.display = "none";
+                showResult();
             }
-        });
+        }
 
-        grinderYesRadio.addEventListener("change", function() {
-            if (grinderYesRadio.checked) {
-                grinderOptionsDiv.style.display = "block";
-            } else {
-                grinderOptionsDiv.style.display = "none";
+        function showResult() {
+            let results = [];
+            
+            if (answers[1] === 'ידני') {
+                results.push('מכונת אספרסו ידנית (לדוגמה: Rancilio Silvia)');
             }
-        });
+            if (answers[2] === 'חיוני') {
+                results.push('מכונה עם מקציף איכותי (לדוגמה: Breville Barista Express)');
+            }
+            if (answers[3] === 'עד 1000₪') {
+                results.push('מכונת קפה ביתית משתלמת (לדוגמה: Delonghi Dedica)');
+            }
+            
+            choicesDiv.innerHTML = results.length > 0 ? results.join('<br>') : 'לא נמצאו התאמות';
+            resultDiv.style.display = 'block';
+        }
+
+        function restart() {
+            answers = {};
+            resultDiv.style.display = 'none';
+            startSurvey();
+        }
+
+        startSurvey();
     </script>
 </body>
 </html>
