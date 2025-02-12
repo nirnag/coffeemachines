@@ -8,6 +8,7 @@
         body { font-family: Arial, sans-serif; direction: rtl; text-align: center; }
         .question, .result { display: none; }
         button { margin-top: 10px; padding: 10px; font-size: 16px; cursor: pointer; }
+        .result p { margin: 10px 0; }
     </style>
 </head>
 <body>
@@ -21,9 +22,9 @@
         </div>
         <div class="question" id="q2">
             <p>כמה חשוב לי איכות מקציף החלב במכונה?</p>
-            <button onclick="answer(2, 'חיוני')">חיוני - אני חייב קצף איכותי</button>
-            <button onclick="answer(2, 'נחמד שיש')">נחמד שיש, אבל לא חובה</button>
-            <button onclick="answer(2, 'לא קריטי')">לא קריטי - אני לא משתמש בחלב מוקצף</button>
+            <button onclick="answer(2, 'עם חלב')">עם חלב - אני חייב קצף איכותי</button>
+            <button onclick="answer(2, 'נחמד שיש חלב')">נחמד שיש חלב, אבל לא חובה</button>
+            <button onclick="answer(2, 'לא קריטי חלב')">לא קריטי חלב - אני לא משתמש בחלב מוקצף</button>
         </div>
         <div class="question" id="q3">
             <p>מה הטווח מחירים?</p>
@@ -35,6 +36,10 @@
     <div class="result" id="result">
         <h2>המכונות שמתאימות לך:</h2>
         <p id="choices"></p>
+        <div id="grinders-section" style="display: none;">
+            <h2>מטחנות קפה:</h2>
+            <p id="grinders"></p>
+        </div>
         <button onclick="restart()">נסה שוב</button>
     </div>
 
@@ -44,6 +49,8 @@
         const questions = document.querySelectorAll('.question');
         const resultDiv = document.getElementById('result');
         const choicesDiv = document.getElementById('choices');
+        const grindersDiv = document.getElementById('grinders');
+        const grindersSection = document.getElementById('grinders-section');
         
         function startSurvey() {
             questions[0].style.display = 'block';
@@ -52,6 +59,7 @@
         function answer(question, choice) {
             answers[question] = choice;
             questions[question - 1].style.display = 'none';
+            
             if (question < questions.length) {
                 questions[question].style.display = 'block';
             } else {
@@ -61,24 +69,34 @@
 
         function showResult() {
             let results = [];
+            let grinders = [];
             
             if (answers[1] === 'ידני') {
-                results.push('מכונת אספרסו ידנית (לדוגמה: Rancilio Silvia)');
+                results.push('מכונת אספרסו ידנית - Rancilio Silvia (מחיר: כ-3000₪, מכונה איכותית לחובבי קפה מקצועיים)');
+                grinders.push('מטחנה חשמלית - Eureka Mignon (מחיר: כ-1500₪, מצוינת לאספרסו)');
+                grinders.push('מטחנה ידנית - 1Zpresso JX (מחיר: כ-600₪, טחינה מדויקת ואיכותית)');
             }
-            if (answers[2] === 'חיוני') {
-                results.push('מכונה עם מקציף איכותי (לדוגמה: Breville Barista Express)');
+            if (answers[2] === 'עם חלב') {
+                results.push('מכונה עם מקציף איכותי - Breville Barista Express (מחיר: כ-2500₪, מכונת אספרסו עם מטחנה מובנית)');
             }
             if (answers[3] === 'עד 1000₪') {
-                results.push('מכונת קפה ביתית משתלמת (לדוגמה: Delonghi Dedica)');
+                results.push('מכונת קפה ביתית משתלמת - Delonghi Dedica (מחיר: כ-900₪, קומפקטית ונוחה לשימוש)');
             }
             
-            choicesDiv.innerHTML = results.length > 0 ? results.join('<br>') : 'לא נמצאו התאמות';
+            choicesDiv.innerHTML = results.length > 0 ? results.join('<br><br>') : 'לא נמצאו התאמות';
+            if (answers[1] === 'ידני' && grinders.length > 0) {
+                grindersDiv.innerHTML = grinders.join('<br><br>');
+                grindersSection.style.display = 'block';
+            } else {
+                grindersSection.style.display = 'none';
+            }
             resultDiv.style.display = 'block';
         }
 
         function restart() {
             answers = {};
             resultDiv.style.display = 'none';
+            grindersSection.style.display = 'none';
             startSurvey();
         }
 
