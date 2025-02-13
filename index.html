@@ -45,6 +45,8 @@
         }
 
         button {
+            
+            height: 60px; /* Set a fixed height */
             margin-top: 20px;
             padding: 15px 35px;
             font-size: 18px;
@@ -78,7 +80,20 @@
 </head>
 <body>
     <h1>סקר לבחירת מכונת קפה</h1>
-    <div id="survey">
+    <div class="container">
+    <div class="legal-section">
+    <p>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייבות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייבות מצדנו לכל דיוק, שלמות או תוקף המידע.</p>
+    <p>ט.ל.ח</p>
+</div>
+        <input type="checkbox" id="agreeCheckbox">
+        <label for="agreeCheckbox">קראתי והסכמתי</label>
+        <br>
+        <button id="startBtn" disabled>התחל</button>
+                    <p></p>
+    </div>
+</div>
+    
+    <div id="survey" style="display: none;">
         <div class="question" id="q1">
             <p>כמה אני אוהב את תהליך הכנת הקפה?</p>
             <button onclick="answer(1, 'ידני')">ידני - אני אוהב לשלוט בכל שלב</button>
@@ -332,9 +347,24 @@
         }
 
         startSurvey();
+        
+          // לוקח את התיבה והכפתור לפי ה-ID שלהם
+    const checkbox = document.getElementById('agreeCheckbox');
+    const startButton = document.getElementById('startBtn');
+    const surveyDiv = document.getElementById('survey');
+
+    // כשמשתמש מסמן את התיבה, הכפתור הופך ללחיץ
+    checkbox.addEventListener('change', function() {
+        startButton.disabled = !this.checked;
+    });
+
+    // כשהמשתמש לוחץ על הכפתור, מסתירים את ההודעה ומראים את הסקר
+    startButton.addEventListener('click', function() {
+        document.querySelector('.container').style.display = 'none'; // מסתיר את התנאים
+        surveyDiv.style.display = 'block'; // מציג את הסקר
+    });
+        
     </script>
-    <div class="disclaimer">
-    <p>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייבות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייבות מצדנו לכל דיוק, שלמות או תוקף המידע.</p>
-</div>
+
 </body>
 </html>
