@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>סקר לבחירת מכונת קפה</title>
+    <title><h1>5 שאלות לבחירת מכונת קפה</h1></title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
     .disclaimer {
@@ -86,10 +86,28 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .accessibility-text {
+            font-size: 0.8em !important;
+            position: fixed;
+            bottom: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         .high-contrast {
             background-color: black !important;
             color: yellow !important;
         }
+        .high-contrast .container {
+    background-color: black !important;  /* רקע שחור */
+        }
+        
+        .high-contrast #result,
+        .high-contrast #result p,
+        .high-contrast #choices {
+            color: yellow !important;
+        }
+
         .large-text * {
             font-size: 1.2em !important;
         }
@@ -99,18 +117,29 @@
     </style>
 </head>
 <body>
-    <h1>סקר לבחירת מכונת קפה</h1>
+    <h1>5 שאלות לבחירת מכונת קפה</h1>
     <div class="container">
     <div class="legal-section">
-    <p>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייב\תות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייב\תות מצדנו לכל דיוק, שלמות או תוקף המידע.
+    <h4>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייב\תות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייב\תות מצדנו לכל דיוק, שלמות או תוקף המידע.
+
 </div>
-        <input type="checkbox" id="agreeCheckbox">
-        <label for="agreeCheckbox">קראתי והסכמתי</label>
-        <br>
-        <button id="startBtn" disabled>התחל</button>
-                    <p></p>
-    </div>
+
+<input type="checkbox" id="agreeCheckbox">
+<label for="agreeCheckbox">קראתי והסכמתי</label>
+<br>
+<button id="startBtn" disabled>התחל</button>
+
+<p></p>
+
+<footer class="accessibility-text">
+    <h2>הצהרת נגישות</h2>
+    <p><strong>אתר זה מותאם לכלל המשתמשים.</strong> במידה ונתקלתם בבעיה, אנא פנו אלינו:</p>
+    <p>מייל: <a href="mailto:Myfirstcoffeecup@gmail.com">Myfirstcoffeecup@gmail.com</a> | ט.ל.ח</p>
+</footer>
+
 </div>
+</div>
+
     
     <div id="survey" style="display: none;">
         <div class="question" id="q1">
@@ -184,166 +213,166 @@
 
           //מכונות ידניות
             if (answers[1] === 'ידני' && answers[2] === 'עם חלב' && answers[3] === 'עד 1000₪') {   
-            results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל)');
+            results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל)');
                 
                 //grinders.push('מטחנה חשמלית - Eureka Mignon (מחיר: כ-1500₪, מצוינת לאספרסו)');
             }
             if (answers[1] === 'ידני' && answers[2] === 'עם חלב' && answers[3] === '1000₪-3000₪') {        
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');            
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית"  width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" alt="מכונת אספרסו Gaggia Classic Pro - עיצוב איטלקי עם מיכל מים 2.1 ליטר" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');            
             }
             if (answers[1] === 'ידני' && answers[2] === 'עם חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RancilioSilvia.png" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachiמצnes/main/RancilioSilvia.png" alt="מכונת אספרסו Rancilio Silvia - תפעול פשוט עם ידית 58 מ""מ" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" alt="מכונת אספרסו Ascaso Dream PID - עיצוב רטרו עם מד לחץ" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" alt="מכונת אספרסו Nuova Simonelli Oscar II - עשויה מנירוסטה עם משאבה רוטורית" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" alt="מכונת אספרסו Lelit Mara X - בקרת טמפרטורה כפולה וחיבור ישיר למים" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" alt="מכונת אספרסו Bezzera BZ10 - עיצוב בסיסי עם אופציה לחיבור ישיר למים" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" alt="מכונת אספרסו Rocket Appartamento - עיצוב איטלקי איכותי עם ברזים וידיות מעץ" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" alt="מכונת אספרסו ECM Mechanika V Slim - הכנת אספרסו וחלב בו זמנית" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" alt="מכונת אספרסו Profitec Pro 700 - עיצוב רטרו עם בקרת טמפרטורה מתקדמת" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" alt="מכונת אספרסו Lelit Bianca V3 - משאבה רוטורית עם חיבור מים ישיר" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
 
             }
           
             if (answers[1] === 'ידני' && answers[2] === 'נחמד שיש חלב' && answers[3] === 'עד 1000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל)');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" alt=">Delonghi - Dedica" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל)');
             }
             if (answers[1] === 'ידני' && answers[2] === 'נחמד שיש חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');   
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" alt="מכונת אספרסו Gaggia Classic Pro - עיצוב איטלקי עם מיכל מים 2.1 ליטר" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');   
 
             }
             if (answers[1] === 'ידני' && answers[2] === 'נחמד שיש חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RancilioSilvia.png" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RancilioSilvia.png" alt="מכונת אספרסו Rancilio Silvia - תפעול פשוט עם ידית 58 מ""מ" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" alt="מכונת אספרסו Ascaso Dream PID - עיצוב רטרו עם מד לחץ" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" alt="מכונת אספרסו Nuova Simonelli Oscar II - עשויה מנירוסטה עם משאבה רוטורית" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" alt="מכונת אספרסו Lelit Mara X - בקרת טמפרטורה כפולה וחיבור ישיר למים" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" alt="מכונת אספרסו Bezzera BZ10 - עיצוב בסיסי עם אופציה לחיבור ישיר למים" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" alt="מכונת אספרסו Rocket Appartamento - עיצוב איטלקי איכותי עם ברזים וידיות מעץ" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" alt="מכונת אספרסו ECM Mechanika V Slim - הכנת אספרסו וחלב בו זמנית" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" alt="מכונת אספרסו Profitec Pro 700 - עיצוב רטרו עם בקרת טמפרטורה מתקדמת" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" alt="מכונת אספרסו Lelit Bianca V3 - משאבה רוטורית עם חיבור מים ישיר" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
             }
 
             if (answers[1] === 'ידני' && answers[2] === 'לא קריטי חלב' && answers[3] === 'עד 1000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" alt="Delonghi - Dedica" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
               
                // grinders.push('מטחנה חשמלית - Eureka Mignon (מחיר: כ-1500₪, מצוינת לאספרסו)');
             }
             if (answers[1] === 'ידני' && answers[2] === 'לא קריטי חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');   
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiDedica.png" alt="Delonghi - Dedica" width="200"><br>Delonghi - Dedica (מחיר: כ-750₪, תועלת גבוהה מול המחיר. ידית הקצפה פשוטה, ידית אספרסו על לחץ לחיפוי על טחינה לא מדוייקת, מיכל מים 1ל. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" alt="מכונת אספרסו Gaggia Classic Pro - עיצוב איטלקי עם מיכל מים 2.1 ליטר" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');   
             }
             if (answers[1] === 'ידני' && answers[2] === 'לא קריטי חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RancilioSilvia.png" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RancilioSilvia.png" alt="מכונת אספרסו Rancilio Silvia - תפעול פשוט עם ידית 58 מ""מ" width="200"><br>Rancilio - Silvia (מחיר: כ-3,300₪, תפעול פשוט, ידית 58מ"מ, דוד עם טמפרטורה יציבה, ידית הקצפה מנירוסטה,  מיכל מים 2ל, משאבה וויברציונית. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/AscasoDreamPID.png" alt="מכונת אספרסו Ascaso Dream PID - עיצוב רטרו עם מד לחץ" width="200"><br>Ascaso - Dream PID (מחיר: כ-4,000₪, רטרו פשוטה וקלאסית, דוד מים איכותי, ידית הקצפה נירוסטה, מיכל מים 1.3 ל, ידית 58מ"מ, עם מד לחץ. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NuovaSimonelliOscarII.png" alt="מכונת אספרסו Nuova Simonelli Oscar II - עשויה מנירוסטה עם משאבה רוטורית" width="200"><br>Nuova - Simonelli Oscar II (מחיר: כ-5,000₪, גדולה יחסית ועשויה מנירוסטה, שומרת על אספרסו עקבי, ידית נירוסטה מקצועית, מיכל פנימי של 3ל, ידית 58מ"מ, מיכל ניקוז גדול, משאבה רוטורית עם חיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" alt="מכונת אספרסו Lelit Mara X - בקרת טמפרטורה כפולה וחיבור ישיר למים" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" alt="מכונת אספרסו Bezzera BZ10 - עיצוב בסיסי עם אופציה לחיבור ישיר למים" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" alt="מכונת אספרסו Rocket Appartamento - עיצוב איטלקי איכותי עם ברזים וידיות מעץ" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" alt="מכונת אספרסו ECM Mechanika V Slim - הכנת אספרסו וחלב בו זמנית" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" alt="מכונת אספרסו Profitec Pro 700 - עיצוב רטרו עם בקרת טמפרטורה מתקדמת" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" alt="מכונת אספרסו Lelit Bianca V3 - משאבה רוטורית עם חיבור מים ישיר" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
             }
           
           //מכונות חצי אוטומטיות
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'עם חלב' && answers[3] === 'עד 1000₪') {
-                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="אין מכונת קפה חצי אוטומטיות במחיר זה" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
 
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'עם חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" alt="מכונת אספרסו DeLonghi La Specialista - מיכל מים 1.5 ליטר עם סטימר מקצועי" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" alt="מכונת אספרסו Breville Barista Express - כולל מטחנה ומיכל מים 2 ליטר" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
 
             }
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'עם חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" alt="מכונת אספרסו Lelit PL042TEMD - מטחנת סכינים קוניות ובקר טמפרטורה" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" alt="מכונת אספרסו Sage Barista Touch - הקצפת חלב אוטומטית עם התאמה אישית" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" alt="מכונת אספרסו Breville Barista Pro - זמן חימום מהיר ותצוגת LCD" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
             }
           
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === 'עד 1000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוה יותר" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
 
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NinjaLuxeEssential.png" width="200"><br>Ninja - Luxe Essential (מחיר: כ-2,800₪, לאספרסו, הפוך וקפה אמריקנו, הקצפה אוטומטית, הכוונה מהמכונה לדיוק הקפה, מטחנה קונית עם 25 דרגות טחינה, מיכל מים 1.2 ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NinjaLuxeEssential.png" alt=">Ninja - Luxe Essentia חדשנית, עם barista assistant" width="200"><br>Ninja - Luxe Essential (מחיר: כ-2,800₪, לאספרסו, הפוך וקפה אמריקנו, הקצפה אוטומטית, הכוונה מהמכונה לדיוק הקפה, מטחנה קונית עם 25 דרגות טחינה, מיכל מים 1.2 ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" alt="מכונת אספרסו DeLonghi La Specialista - מיכל מים 1.5 ליטר עם סטימר מקצועי" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" alt="מכונת אספרסו Breville Barista Express - כולל מטחנה ומיכל מים 2 ליטר" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
             }
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" alt="מכונת אספרסו Lelit PL042TEMD - מטחנת סכינים קוניות ובקר טמפרטורה" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" alt="מכונת אספרסו Sage Barista Touch - הקצפת חלב אוטומטית עם התאמה אישית" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" alt="מכונת אספרסו Breville Barista Pro - זמן חימום מהיר ותצוגת LCD" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
             }
 
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === 'עד 1000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוה יותר" width="200"><br>לא מצאתי מכונה חצי אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NinjaLuxeEssential.png" width="200"><br>Ninja - Luxe Essential (מחיר: כ-2,800₪, לאספרסו, הפוך וקפה אמריקנו, הקצפה אוטומטית, הכוונה מהמכונה לדיוק הקפה, מטחנה קונית עם 25 דרגות טחינה, מיכל מים 1.2 ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NinjaLuxeEssential.png" alt="Ninja - Luxe Essentia חדשנית, עם barista assistant" width="200"><br>Ninja - Luxe Essential (מחיר: כ-2,800₪, לאספרסו, הפוך וקפה אמריקנו, הקצפה אוטומטית, הכוונה מהמכונה לדיוק הקפה, מטחנה קונית עם 25 דרגות טחינה, מיכל מים 1.2 ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiLaSpecialistaec9155.png" alt="מכונת אספרסו DeLonghi La Specialista - מיכל מים 1.5 ליטר עם סטימר מקצועי" width="200"><br>DeLonghi - La Specialista (מחיר: כ-2,800₪, מיכל מים 1.5 ל, סטימר נירוסטה מקצועי, 2 גופי חימום. )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaExpress.png" alt="מכונת אספרסו Breville Barista Express - כולל מטחנה ומיכל מים 2 ליטר" width="200"><br>Breville - Barista Express (מחיר: כ-3,700₪, הכל באחד, עיצוב קלאסי חדשני, מיכל פולים 250גרם, מיכל מים 2ל )');
             }
             if (answers[1] === 'חצי אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Lelitpl042temd.png" alt="מכונת אספרסו Lelit PL042TEMD - מטחנת סכינים קוניות ובקר טמפרטורה" width="200"><br>Lelit - pl042temd (מחיר: כ-3,700₪, מטחנת סכינים קוניות 38מ"מ, כוונון ידני נגיש לאיזה רמות טחינה שרוצים, בקר טמפרטורה, דוד 250מ"מ, ידית 57, סטימר נירוסטה מקצועי )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SageBaristaTouch.png" alt="מכונת אספרסו Sage Barista Touch - הקצפת חלב אוטומטית עם התאמה אישית" width="200"><br>Sage - Barista Touch (מחיר: כ-4,000₪, 30 הגדרות טחינה, חימום מהיר, בקרת טמפרטורה דיגיטלית, הקצפת חלב נירוסטה אוטומטית עם התאמה לאישית, מיכל מים 2ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBaristaPro.png" alt="מכונת אספרסו Breville Barista Pro - זמן חימום מהיר ותצוגת LCD" width="200"><br>Breville - Barista Pro (מחיר: כ-4,000₪, זמן חימום מאוד מהיר, 30 הגדרות טחינה, תצוגת LCD, מיכל מים 2ל )');
             }
           
             //מכונות אוטומטיות
             if (answers[1] === 'אוטומטי' && answers[2] === 'עם חלב' && answers[3] === 'עד 1000₪') {
-               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוה יותר" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'עם חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPlus.png" width="200"><br>Gaggia - Magenta Plus (מחיר: כ-2,200₪, עם מקציף קיטור נירוסטה, מיכל פולים 250גרם, מיכל מים 1.8 ל, 12 מצבי טחינה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaBrera.png" width="200"><br>Gaggia - Brera (מחיר: כ-2,400₪, איטלקית עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.2 ל, 5 מצבי טחינה, ממשק עריכה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPrestige.png" width="200"><br>Gaggia - Magenta Prestige (מחיר: כ-2,700₪, מיכל הקצפה אוטומטית, מיכל מים 1.8ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPlus.png" alt="מכונת אספרסו Gaggia Magenta Plus - עם מקציף קיטור נירוסטה" width="200"><br>Gaggia - Magenta Plus (מחיר: כ-2,200₪, עם מקציף קיטור נירוסטה, מיכל פולים 250גרם, מיכל מים 1.8 ל, 12 מצבי טחינה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaBrera.png" alt="מכונת אספרסו Gaggia Brera - איטלקית עם מקציף קיטור וממשק עריכה" width="200"><br>Gaggia - Brera (מחיר: כ-2,400₪, איטלקית עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.2 ל, 5 מצבי טחינה, ממשק עריכה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPrestige.png" alt="מכונת אספרסו Gaggia Magenta Prestige - מיכל הקצפה אוטומטי" width="200"><br>Gaggia - Magenta Prestige (מחיר: כ-2,700₪, מיכל הקצפה אוטומטית, מיכל מים 1.8ל )');
               
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'עם חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" alt="מכונת אספרסו DeLonghi Dinamica Plus - ממשק עריכה והקצפה אוטומטית" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" alt="מכונת אספרסו Jura E8 - מיכל פולים גדול ומערכת הקצפה אוטומטית" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" alt="מכונת אספרסו Siemens EQ.9 Plus - מיכל מים 2.3 ליטר עם מקציף מובנה" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
             }
           
             if (answers[1] === 'אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === 'עד 1000₪') {
-               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוה יותר" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PhilipsOMNIA.png" width="200"><br>Philips - OMNIA EP2220/10 (מחיר: כ-1,500₪, מקציף קיטור בסיסי מאוד, 12 דרגות טחינה, 1.8 ל 275גרם מיכל פולים )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiMagnificaSECAM.png" width="200"><br>Delonghi - Magnifica S ECAM (מחיר: כ-1,900₪, עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.8 ל, 13 מצבי טחינה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NivonaCafeRomaticaNICR.png" width="200"><br>Nivona - CafeRomatica NICR מןבר (מחיר: כ-2,600₪, עם יציאת חלב מוקצף אוטומטי, 3 רמות טמפרטורה, מיכל פולים 250גרם, מיכל מים 2.2ל)');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPrestige.png" width="200"><br>Gaggia - Magenta Prestige (מחיר: כ-2,700₪, מיכל הקצפה אוטומטית, מיכל מים 1.8ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Phillips3300LatteGo.png" width="200"><br>Phillips - 3300 LatteGo (מחיר: כ-2,800₪, הקצפה אוטומטית, יותר שקטה, 12 דרגות טחינה, מיכל מים 1.8ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PhilipsOMNIA.png" alt="מכונת אספרסו Philips OMNIA EP2220/10 - מקציף קיטור בסיסי עם 12 דרגות טחינה" width="200"><br>Philips - OMNIA EP2220/10 (מחיר: כ-1,500₪, מקציף קיטור בסיסי מאוד, 12 דרגות טחינה, 1.8 ל 275גרם מיכל פולים )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiMagnificaSECAM.png" alt="מכונת אספרסו Delonghi Magnifica S ECAM - עם מקציף קיטור ומיכל פולים 250 גרם" width="200"><br>Delonghi - Magnifica S ECAM (מחיר: כ-1,900₪, עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.8 ל, 13 מצבי טחינה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NivonaCafeRomaticaNICR.png" alt="מכונת אספרסו Nivona CafeRomatica NICR - יציאת חלב מוקצף אוטומטי" width="200"><br>Nivona - CafeRomatica NICR מןבר (מחיר: כ-2,600₪, עם יציאת חלב מוקצף אוטומטי, 3 רמות טמפרטורה, מיכל פולים 250גרם, מיכל מים 2.2ל)');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPrestige.png" alt="מכונת אספרסו Gaggia Magenta Prestige - מיכל הקצפה אוטומטי" width="200"><br>Gaggia - Magenta Prestige (מחיר: כ-2,700₪, מיכל הקצפה אוטומטית, מיכל מים 1.8ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Phillips3300LatteGo.png" alt="מכונת אספרסו Phillips 3300 LatteGo - הקצפה אוטומטית ושקטה" width="200"><br>Phillips - 3300 LatteGo (מחיר: כ-2,800₪, הקצפה אוטומטית, יותר שקטה, 12 דרגות טחינה, מיכל מים 1.8ל )');
 
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'נחמד שיש חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" alt="מכונת אספרסו DeLonghi Dinamica Plus - ממשק עריכה והקצפה אוטומטית" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" alt="מכונת אספרסו Jura E8 - מיכל פולים גדול ומערכת הקצפה אוטומטית" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" alt="מכונת אספרסו Siemens EQ.9 Plus - מיכל מים 2.3 ליטר עם מקציף מובנה" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
 
             }
 
             if (answers[1] === 'אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === 'עד 1000₪') {
-               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
+               results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dontdo.png" alt="לא מצאתי מכונת קפה אוטומטית במחיר הזה, נסו מחיר גבוה יותר" width="200"><br>לא מצאתי מכונה אוטומטית במחיר הזה, נסו מחיר גבוהה יותר');
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === '1000₪-3000₪') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PascaleLifeAndFun.png" width="200"><br>Pascale - Life & Fun (מחיר: כ-1,500₪, קומפקטית לאספרסו, בלי מקציף חלב, מיכל קפה 100גרם, 5 רמות טחינה, מיכל מים 1.1ל )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PhilipsOMNIA.png" width="200"><br>Philips - OMNIA EP2220/10 (מחיר: כ-1,500₪, מקציף קיטור בסיסי מאוד, 12 דרגות טחינה, 1.8 ל 275גרם מיכל פולים )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiMagnificaSECAM.png" width="200"><br>Delonghi - Magnifica S ECAM (מחיר: כ-1,900₪, עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.8 ל, 13 מצבי טחינה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPlus.png" width="200"><br>Gaggia - Magenta Plus (מחיר: כ-2,200₪, עם מקציף קיטור נירוסטה, מיכל פולים 250גרם, מיכל מים 1.8 ל, 12 מצבי טחינה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaBrera.png" width="200"><br>Gaggia - Brera (מחיר: כ-2,400₪, איטלקית עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.2 ל, 5 מצבי טחינה, ממשק עריכה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NivonaCafeRomaticaNICR.png" width="200"><br>Nivona - CafeRomatica NICR מןבר (מחיר: כ-2,600₪, עם יציאת חלב מוקצף אוטומטי, 3 רמות טמפרטורה, מיכל פולים 250גרם, מיכל מים 2.2ל)');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PascaleLifeAndFun.png" alt="מכונת אספרסו Pascale Life & Fun - קומפקטית ללא מקציף חלב" width="200"><br>Pascale - Life & Fun (מחיר: כ-1,500₪, קומפקטית לאספרסו, בלי מקציף חלב, מיכל קפה 100גרם, 5 רמות טחינה, מיכל מים 1.1ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/PhilipsOMNIA.png" alt="מכונת אספרסו Philips OMNIA EP2220/10 - מקציף קיטור בסיסי עם 12 דרגות טחינה" width="200"><br>Philips - OMNIA EP2220/10 (מחיר: כ-1,500₪, מקציף קיטור בסיסי מאוד, 12 דרגות טחינה, 1.8 ל 275גרם מיכל פולים )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiMagnificaSECAM.png" alt="מכונת אספרסו Delonghi Magnifica S ECAM - עם מקציף קיטור ומיכל פולים 250 גרם" width="200"><br>Delonghi - Magnifica S ECAM (מחיר: כ-1,900₪, עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.8 ל, 13 מצבי טחינה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaMagentaPlus.png" alt="מכונת אספרסו Gaggia Magenta Plus - עם מקציף קיטור נירוסטה" width="200"><br>Gaggia - Magenta Plus (מחיר: כ-2,200₪, עם מקציף קיטור נירוסטה, מיכל פולים 250גרם, מיכל מים 1.8 ל, 12 מצבי טחינה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaBrera.png" alt="מכונת אספרסו Gaggia Brera - איטלקית עם מקציף קיטור וממשק עריכה" width="200"><br>Gaggia - Brera (מחיר: כ-2,400₪, איטלקית עם מקציף קיטור, מיכל פולים 250גרם, מיכל מים 1.2 ל, 5 מצבי טחינה, ממשק עריכה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/NivonaCafeRomaticaNICR.png" alt="מכונת אספרסו Nivona CafeRomatica NICR - יציאת חלב מוקצף אוטומטי" width="200"><br>Nivona - CafeRomatica NICR מןבר (מחיר: כ-2,600₪, עם יציאת חלב מוקצף אוטומטי, 3 רמות טמפרטורה, מיכל פולים 250גרם, מיכל מים 2.2ל)');
 
 
             }
             if (answers[1] === 'אוטומטי' && answers[2] === 'לא קריטי חלב' && answers[3] === '3000₪ ומעלה') {
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DeLonghiDinamicaPlus.png" alt="מכונת אספרסו DeLonghi Dinamica Plus - ממשק עריכה והקצפה אוטומטית" width="200"><br>DeLonghi - Dinamica Plus (מחיר: כ-4,000₪, הקצפה אוטומטית, יותר שקטה, מיכל מים 1.8ל, ממשק עריכה )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/JuraE8.png" alt="מכונת אספרסו Jura E8 - מיכל פולים גדול ומערכת הקצפה אוטומטית" width="200"><br>Jura - E8 (מחיר: כ-6,400₪, מקציף אוטומטי, מומלץ להוסיף מקרר חלב, מיכל פולים 280גרם, מיכל מים 1.9 גרם, מיכל ריקון גדול, הרבה פונקציות תכנות )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/SiemensEQ9 Plus.png" alt="מכונת אספרסו Siemens EQ.9 Plus - מיכל מים 2.3 ליטר עם מקציף מובנה" width="200"><br>Siemens - EQ.9 Plus (מחיר: כ-6,800₪, מקציף מובנה, מיכל מים 2.3 ליטר, מיכל פולים 290 גרם )');
 
             }
 
@@ -356,7 +385,9 @@
                 grindersSection.style.display = 'none';
             }
             resultDiv.style.display = 'block';
+            
         }
+
 
         function restart() {
             answers = {};
@@ -396,15 +427,32 @@
     <button class="accessibility-btn" onclick="toggleAccessibility()">נגישות</button>
     
     <div id="accessibility-menu" style="display: none; position: fixed; bottom: 50px; right: 10px; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
-        <button onclick="document.body.classList.toggle('high-contrast')">מצב ניגודיות גבוהה</button>
-        <button onclick="document.documentElement.classList.toggle('large-text')">
+        <button onclick="document.body.classList.toggle('high-contrast')" >מצב ניגודיות גבוהה </button>
+        <button id="toggleButton" onclick="toggleTextSize()">
     הגדלת טקסט
 </button>
+<script>
+function toggleTextSize() {
+    document.documentElement.classList.toggle('large-text');
+    
+    // Update button text based on the class presence
+    const button = document.getElementById('toggleButton');
+    if (document.documentElement.classList.contains('large-text')) {
+        button.textContent = 'הקטנת טקסט';
+    } else {
+        button.textContent = 'הגדלת טקסט';
+    }
+}
+</script>
+
+<style>
+.large-text h1 {
+    font-size: 2em !important; /* Adjust size as needed */
+}
+</style>
 
     </div>
     
-    <footer>
-        <p><strong>הצהרת נגישות:</strong> אתר זה מותאם לכלל המשתמש\תים. במידה ונתקלתם בבעיה, ניתן לפנות למייל: nirnagar11@gmail.com | ט.ל.ח</p>
-    </footer> 
+
 </body>
 </html>
