@@ -76,14 +76,33 @@
             color: #5C4033;
             font-weight: 500;
         }
+        .accessibility-btn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .high-contrast {
+            background-color: black !important;
+            color: yellow !important;
+        }
+        .large-text * {
+            font-size: 1.2em !important;
+        }
+        a, button {
+            outline: none;
+        }
     </style>
 </head>
 <body>
     <h1>סקר לבחירת מכונת קפה</h1>
     <div class="container">
     <div class="legal-section">
-    <p>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייבות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייבות מצדנו לכל דיוק, שלמות או תוקף המידע.</p>
-    <p>ט.ל.ח</p>
+    <p>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייב\תות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייב\תות מצדנו לכל דיוק, שלמות או תוקף המידע.
 </div>
         <input type="checkbox" id="agreeCheckbox">
         <label for="agreeCheckbox">קראתי והסכמתי</label>
@@ -95,16 +114,16 @@
     
     <div id="survey" style="display: none;">
         <div class="question" id="q1">
-            <p>כמה אני אוהב את תהליך הכנת הקפה?</p>
-            <button onclick="answer(1, 'ידני')">ידני - אני אוהב לשלוט בכל שלב</button>
+            <p>כמה אני אוהב\ת את תהליך הכנת הקפה?</p>
+            <button onclick="answer(1, 'ידני')">ידני - אני אוהב\ת לשלוט בכל שלב</button>
             <button onclick="answer(1, 'חצי אוטומטי')">חצי אוטומטי - איזון בין נוחות לשליטה</button>
             <button onclick="answer(1, 'אוטומטי')">אוטומטי - רק ללחוץ על כפתור</button>
         </div>
         <div class="question" id="q2">
             <p>כמה חשוב לי איכות מקציף החלב במכונה?</p>
-            <button onclick="answer(2, 'עם חלב')">עם חלב - אני חייב קצף איכותי</button>
+            <button onclick="answer(2, 'עם חלב')">עם חלב - אני חייב\ת קצף איכותי</button>
             <button onclick="answer(2, 'נחמד שיש חלב')">נחמד שיש חלב, אבל לא חובה</button>
-            <button onclick="answer(2, 'לא קריטי חלב')">לא קריטי חלב - אני לא משתמש בחלב מוקצף</button>
+            <button onclick="answer(2, 'לא קריטי חלב')">לא קריטי חלב - אני לא משתמש\ת בחלב מוקצף</button>
         </div>
         <div class="question" id="q3">
             <p>מה הטווח מחירים?</p>
@@ -180,7 +199,7 @@
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
 
@@ -202,7 +221,7 @@
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
             }
@@ -224,7 +243,7 @@
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitMaraX.png" width="200"><br>Lelit - Mara x (מחיר: כ-6,000₪, עיצוב איטלקי איכותי ושקט, בקרת טמפרטורה כפולה, הקצפת חלב וחליטה בו זמנית, ידית 58 מקצועית וחיבור ישיר למים. )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BezzeraBZ10.png" width="200"><br>Bezzera - BZ10 (מחיר: כ-6,900₪, עיצוב בייסיק, אופציה לחיבור ישיר למים, 2 יחידות חימום )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/RocketAppartamento.png" width="200"><br>Rocket - Appartamento (מחיר: כ-7,000₪, עיצוב איטלקי איכותי עם ברזים וידית מעץ, התחממות מיטבית תוך 24 דקות, בקרת טמפרטורה מדויקת, משאבה רוטורית עם חיבור ישיר למים, אופציה להקצפה ואספרסו בו זמנית, ידית 58 מ״מ, מיכל מים 2.5ל׳ )');
-                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
+                results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ECMMechanikaVSlim.png" width="200"><br>ECM - Mechanika V Slim (מחיר: כ-7,000₪, עיצוב איטלקי איכותי, אידיאלית למי שאוהב\ת שליטה מלאה, אופציה להכנת אספרסו וחלב בו זמנית, ידית הקצפה איכותית ולא מתחממת מבחוץ, דוד בקרה איכותי, מיכל מים 2.9ל )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ProfitecPro700.png" width="200"><br>Profitec - Pro 700 (מחיר: כ-10,000₪, דגם יוקרתי בעיצוב רטרו, משאבה רוטורית עם חיבור ישיר למים, אופציה למיכל מים 2.8 ל, מאוד נוחה ומרווחת לשימוש )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/LelitBiancaV3.png" width="200"><br>Lelit - Bianca V3 (מחיר: כ-10,000₪, בלתי מתפשרת, עיצוב יפיפיה עם ידיות מעץ, ידית הקצפה מקצועית, שליטה ידנית על זרימת המים, דוד כפול, משאבה רוטורית עם חיבור מים ישיר, אופציה לניקוז ישיר,בקר טמפרטורה, תצוגת lcd, ידית 58מ״מ )');
             }
@@ -353,18 +372,39 @@
     const startButton = document.getElementById('startBtn');
     const surveyDiv = document.getElementById('survey');
 
-    // כשמשתמש מסמן את התיבה, הכפתור הופך ללחיץ
+    // כשמשתמש\ת מסמן את התיבה, הכפתור הופך ללחיץ
     checkbox.addEventListener('change', function() {
         startButton.disabled = !this.checked;
     });
 
-    // כשהמשתמש לוחץ על הכפתור, מסתירים את ההודעה ומראים את הסקר
+    // כשהמשתמש\ת לוחץ על הכפתור, מסתירים את ההודעה ומראים את הסקר
     startButton.addEventListener('click', function() {
         document.querySelector('.container').style.display = 'none'; // מסתיר את התנאים
         surveyDiv.style.display = 'block'; // מציג את הסקר
     });
-        
+    
+        function toggleAccessibility() {
+            var menu = document.getElementById('accessibility-menu');
+            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+        }
+        document.getElementById('agreeCheckbox').addEventListener('change', function() {
+            document.getElementById('startBtn').disabled = !this.checked;
+        });
     </script>
 
+        
+    <button class="accessibility-btn" onclick="toggleAccessibility()">נגישות</button>
+    
+    <div id="accessibility-menu" style="display: none; position: fixed; bottom: 50px; right: 10px; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+        <button onclick="document.body.classList.toggle('high-contrast')">מצב ניגודיות גבוהה</button>
+        <button onclick="document.documentElement.classList.toggle('large-text')">
+    הגדלת טקסט
+</button>
+
+    </div>
+    
+    <footer>
+        <p><strong>הצהרת נגישות:</strong> אתר זה מותאם לכלל המשתמש\תים. במידה ונתקלתם בבעיה, ניתן לפנות למייל: nirnagar11@gmail.com | ט.ל.ח</p>
+    </footer> 
 </body>
 </html>
