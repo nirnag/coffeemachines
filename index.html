@@ -78,12 +78,12 @@
         }
         .accessibility-btn {
             position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background: #000;
+            bottom: 6px;
+            right: 0px;
+            background: #009;
             color: #fff;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 6px;
+            border-radius: 6px;
             cursor: pointer;
         }
         .accessibility-text {
@@ -121,7 +121,10 @@
     <div class="container">
     <div class="legal-section">
     <h4>המידע המופיע בעמוד זה נועד למטרות כלליות ואינו מהווה ייעוץ מקצועי, המלצה או התחייב\תות. אין לראות במידע זה כהנחיה מוסמכת או כהתחייב\תות מצדנו לכל דיוק, שלמות או תוקף המידע.
-
+<footer class="accessibility-text">
+    <p><strong>הצהרת נגישות: אתר זה מותאם לכלל המשתמשים.</strong> במידה ונתקלתם בבעיה, אנא פנו אלינו:</p>
+    <p>מייל: <a href="mailto:Myfirstcoffeecup@gmail.com">Myfirstcoffeecup@gmail.com</a> | ט.ל.ח</p>
+</footer>
 </div>
 
 <input type="checkbox" id="agreeCheckbox">
@@ -131,10 +134,7 @@
 
 <p></p>
 
-<footer class="accessibility-text">
-    <p><strong>הצהרת נגישות: אתר זה מותאם לכלל המשתמשים.</strong> במידה ונתקלתם בבעיה, אנא פנו אלינו:</p>
-    <p>מייל: <a href="mailto:Myfirstcoffeecup@gmail.com">Myfirstcoffeecup@gmail.com</a> | ט.ל.ח</p>
-</footer>
+
 
 </div>
 </div>
@@ -432,8 +432,9 @@
 </button>
 <script>
 function toggleTextSize() {
-    document.documentElement.classList.toggle('large-text');
-    
+
+                document.documentElement.classList.toggle("large-text");
+
     // Update button text based on the class presence
     const button = document.getElementById('toggleButton');
     if (document.documentElement.classList.contains('large-text')) {
