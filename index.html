@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
+    <script src="https://cdn.userway.org/widget.js" data-account="kogsbIn7RT"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><h1>5 שאלות לבחירת מכונת קפה</h1></title>
@@ -76,16 +77,17 @@
             color: #5C4033;
             font-weight: 500;
         }
-        .accessibility-btn {
-            position: fixed;
-            bottom: 6px;
-            right: 0px;
-            background: #009;
-            color: #fff;
-            padding: 6px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.accessibility-text {
+    font-size: 0.63em !important;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
         .accessibility-text {
             font-size: 0.63em !important;
             position: fixed;
@@ -423,29 +425,6 @@
             document.getElementById('startBtn').disabled = !this.checked;
         });
     </script>
-
-        
-    <button class="accessibility-btn" onclick="toggleAccessibility()">נגישות</button>
-    
-    <div id="accessibility-menu" style="display: none; position: fixed; bottom: 50px; right: 10px; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
-        <button onclick="document.body.classList.toggle('high-contrast')" >מצב ניגודיות גבוהה </button>
-        <button id="toggleButton" onclick="toggleTextSize()">
-    הגדלת טקסט
-</button>
-<script>
-function toggleTextSize() {
-
-                document.documentElement.classList.toggle("large-text");
-
-    // Update button text based on the class presence
-    const button = document.getElementById('toggleButton');
-    if (document.documentElement.classList.contains('large-text')) {
-        button.textContent = 'הקטנת טקסט';
-    } else {
-        button.textContent = 'הגדלת טקסט';
-    }
-}
-</script>
 
 <style>
 .large-text h1 {
