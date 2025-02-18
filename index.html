@@ -213,139 +213,144 @@
         function showResult() {
             let results = [];
             let grinders = [];
+            
+             if (answers[1] === 'ידני') 
+             {
+            //מטחנות
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiKG79.png" alt="Delonghi KG79" width="200"><br>
+                <strong>מטחנת קפה Delonghi KG79</strong><br>
+                • מחיר: כ-350 ₪<br>
+                • תיאור: חשמלית, 16 דרגות טחינה, סכינים שטוחות.
+            `);
 
-          //מכונות ידניות
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MelittaMolino.png" alt="Melitta Molino" width="200"><br>
+                <strong>מטחנת קפה Melitta Molino</strong><br>
+                • מחיר: כ-500 ₪<br>
+                • תיאור: חשמלית, 17 דרגות טחינה, סכינים שטוחות.
+            `);
+
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GraefCM702.png" alt="Graef CM702" width="200"><br>
+                <strong>מטחנת קפה Graef CM702</strong><br>
+                • מחיר: כ-500 ₪<br>
+                • תיאור: חשמלית, 24 דרגות טחינה, סכינים קוניות, רועש.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBCG820BSS.png" alt="Breville BCG820BSS" width="200"><br>
+                <strong>מטחנת קפה Breville BCG820BSS</strong><br>
+                • מחיר: כ–1,500 ₪<br>
+                • תיאור: חשמלית, 60 דרגות טחינה, סכינים קוניות.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CompakK-3Touch.png" alt="Compak K-3 Touch" width="200"><br>
+                <strong>מטחנת קפה Compak K-3 Touch</strong><br>
+                • מחיר: כ-1,650 ₪<br>
+                • תיאור: חשמלית, סכינים שטוחות בגודל 58 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignon.png" alt="Eureka Mignon" width="200"><br>
+                <strong>מטחנת קפה Eureka Mignon</strong><br>
+                • מחיר: כ-1,700 ₪<br>
+                • תיאור: חשמלית, סכינים שטוחות, גודל סכינים 50 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignonSpecialita.png" alt="Eureka Mignon Specialita" width="200"><br>
+                <strong>מטחנת קפה Eureka Mignon Specialita</strong><br>
+                • מחיר: כ-2,000 ₪<br>
+                • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MacapLEO55.png" alt="Macap Leo 55 Essential" width="200"><br>
+                <strong>מטחנת קפה Macap Leo 55 Essential</strong><br>
+                • מחיר: כ-2,200 ₪<br>
+                • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/FiorenzatoF4Nano.png" alt="Fiorenzato F4 Nano" width="200"><br>
+                <strong>מטחנת קפה Fiorenzato F4 Nano</strong><br>
+                • מחיר: כ-2,400 ₪<br>
+                • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BaratzaSette270.png" alt="Baratza Sette 270" width="200"><br>
+                <strong>מטחנת קפה Baratza Sette 270</strong><br>
+                • מחיר: כ-2,700 ₪<br>
+                • תיאור: מטחנה חשמלית עם 270 דרגות טחינה, סכינים קוניות בקוטר 40 מ"מ.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignonOroSingleDoes.png" alt="Eureka Mignon Oro Single Dose" width="200"><br>
+                <strong>מטחנת קפה Eureka Mignon Oro Single Dose</strong><br>
+                • מחיר: כ-2,900 ₪<br>
+                • תיאור: מטחנה חשמלית סטפלס – שליטה אינסופית בדרגות טחינה, סכינים שטוחים בקוטר 65 מ"מ, מתאימה במיוחד לאספרסו.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MazzerMiniElectronic.png" alt="Mazzer Mini Electronic" width="200"><br>
+                <strong>מטחנת קפה Mazzer Mini Electronic</strong><br>
+                • מחיר: כ-3,200 ₪<br>
+                • תיאור: מטחנה עם 64 מ"מ סכינים שטוחות, 1,400 RPM.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CeadoE37S.png" alt="Ceado E37S" width="200"><br>
+                <strong>מטחנת קפה Ceado E37S</strong><br>
+                • מחיר: כ-6,000 ₪<br>
+                • תיאור: מטחנה חשמלית עם 83 מ"מ סכינים שטוחות, 1,700 RPM.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CompakR8.png" alt="Compak R8" width="200"><br>
+                <strong>מטחנת קפה Compak R8</strong><br>
+                • מחיר: כ-16,000 ₪<br>
+                • תיאור: מטחנה חשמלית מקצועית עם 83 מ"מ סכינים שטוחות, 1290 RPM.
+            `);
+            
+            // Manual Grinders
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Timemore.png" alt="Timemore" width="200"><br>
+                <strong>מטחנת קפה ידנית Timemore</strong><br>
+                • מחיר: 300 ₪<br>
+                • תיאור: מטחנה עם סכינים קוניות ממתכת 35 מ"מ עם כיוון ע"י קליקים, מתאימה גם לאספרסו.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/OAK8.png" alt="OAK8" width="200"><br>
+                <strong>מטחנת קפה ידנית OAK8</strong><br>
+                • מחיר: 350 ₪<br>
+                • תיאור: מטחנה ידנית איכותית עם קוטר סכינים של 38 מ"מ, מאפשרת טחינה מדויקת והתאמה אישית.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ComandanteC40MK3.png" alt="Comandante C40 MK3" width="200"><br>
+                <strong>מטחנת קפה ידנית Comandante C40 MK3</strong><br>
+                • מחיר: כ-1,200 ₪<br>
+                • תיאור: מטחנה ידנית גרמנית עם סכינים מנירוסטה, ידועה בדיוק ובאיכות הטחינה שלה.
+            `);
+            
+            grinders.push(`
+                <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/OrphanEspressoLido3.png" alt="Orphan Espresso Lido 3" width="200"><br>
+                <strong>מטחנת קפה ידנית Orphan Espresso Lido 3</strong><br>
+                • מחיר: עד 1,300 ₪<br>
+                • תיאור: מטחנה ידנית מקצועית עם קוטר סכינים של 48 מ"מ, מתאימה לחובבי קפה המחפשים דיוק ואיכות.
+            `);
+        }
+
+//מכונות ידניות
             if (answers[1] === 'ידני' && answers[2] === 'עם חלב' && answers[3] === 'עד 1000₪') {   
             results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית" width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל)');
 
-            grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/DelonghiKG79.png" alt="Delonghi KG79" width="200"><br>
-    <strong>מטחנת קפה Delonghi KG79</strong><br>
-    • מחיר: כ-350 ₪<br>
-    • תיאור: חשמלית, 16 דרגות טחינה, סכינים שטוחות.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MelittaMolino.png" alt="Melitta Molino" width="200"><br>
-    <strong>מטחנת קפה Melitta Molino</strong><br>
-    • מחיר: כ-500 ₪<br>
-    • תיאור: חשמלית, 17 דרגות טחינה, סכינים שטוחות.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GraefCM702.png" alt="Graef CM702" width="200"><br>
-    <strong>מטחנת קפה Graef CM702</strong><br>
-    • מחיר: כ-500 ₪<br>
-    • תיאור: חשמלית, 24 דרגות טחינה, סכינים קוניות, רועש.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BrevilleBCG820BSS.png" alt="Breville BCG820BSS" width="200"><br>
-    <strong>מטחנת קפה Breville BCG820BSS</strong><br>
-    • מחיר: כ–1,500 ₪<br>
-    • תיאור: חשמלית, 60 דרגות טחינה, סכינים קוניות.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CompakK-3Touch.png" alt="Compak K-3 Touch" width="200"><br>
-    <strong>מטחנת קפה Compak K-3 Touch</strong><br>
-    • מחיר: כ-1,650 ₪<br>
-    • תיאור: חשמלית, סכינים שטוחות בגודל 58 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignon.png" alt="Eureka Mignon" width="200"><br>
-    <strong>מטחנת קפה Eureka Mignon</strong><br>
-    • מחיר: כ-1,700 ₪<br>
-    • תיאור: חשמלית, סכינים שטוחות, גודל סכינים 50 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignonSpecialita.png" alt="Eureka Mignon Specialita" width="200"><br>
-    <strong>מטחנת קפה Eureka Mignon Specialita</strong><br>
-    • מחיר: כ-2,000 ₪<br>
-    • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MacapLEO55.png" alt="Macap Leo 55 Essential" width="200"><br>
-    <strong>מטחנת קפה Macap Leo 55 Essential</strong><br>
-    • מחיר: כ-2,200 ₪<br>
-    • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/FiorenzatoF4Nano.png" alt="Fiorenzato F4 Nano" width="200"><br>
-    <strong>מטחנת קפה Fiorenzato F4 Nano</strong><br>
-    • מחיר: כ-2,400 ₪<br>
-    • תיאור: חשמלית, סכינים שטוחות בגודל 55 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/BaratzaSette270.png" alt="Baratza Sette 270" width="200"><br>
-    <strong>מטחנת קפה Baratza Sette 270</strong><br>
-    • מחיר: כ-2,700 ₪<br>
-    • תיאור: מטחנה חשמלית עם 270 דרגות טחינה, סכינים קוניות בקוטר 40 מ"מ.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/EurekaMignonOroSingleDoes.png" alt="Eureka Mignon Oro Single Dose" width="200"><br>
-    <strong>מטחנת קפה Eureka Mignon Oro Single Dose</strong><br>
-    • מחיר: כ-2,900 ₪<br>
-    • תיאור: מטחנה חשמלית סטפלס – שליטה אינסופית בדרגות טחינה, סכינים שטוחים בקוטר 65 מ"מ, מתאימה במיוחד לאספרסו.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/MazzerMiniElectronic.png" alt="Mazzer Mini Electronic" width="200"><br>
-    <strong>מטחנת קפה Mazzer Mini Electronic</strong><br>
-    • מחיר: כ-3,200 ₪<br>
-    • תיאור: מטחנה עם 64 מ"מ סכינים שטוחות, 1,400 RPM.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CeadoE37S.png" alt="Ceado E37S" width="200"><br>
-    <strong>מטחנת קפה Ceado E37S</strong><br>
-    • מחיר: כ-6,000 ₪<br>
-    • תיאור: מטחנה חשמלית עם 83 מ"מ סכינים שטוחות, 1,700 RPM.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/CompakR8.png" alt="Compak R8" width="200"><br>
-    <strong>מטחנת קפה Compak R8</strong><br>
-    • מחיר: כ-16,000 ₪<br>
-    • תיאור: מטחנה חשמלית מקצועית עם 83 מ"מ סכינים שטוחות, 1290 RPM.
-`);
-
-// Manual Grinders
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/Timemore.png" alt="Timemore" width="200"><br>
-    <strong>מטחנת קפה ידנית Timemore</strong><br>
-    • מחיר: 300 ₪<br>
-    • תיאור: מטחנה עם סכינים קוניות ממתכת 35 מ"מ עם כיוון ע"י קליקים, מתאימה גם לאספרסו.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/OAK8.png" alt="OAK8" width="200"><br>
-    <strong>מטחנת קפה ידנית OAK8</strong><br>
-    • מחיר: 350 ₪<br>
-    • תיאור: מטחנה ידנית איכותית עם קוטר סכינים של 38 מ"מ, מאפשרת טחינה מדויקת והתאמה אישית.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/ComandanteC40MK3.png" alt="Comandante C40 MK3" width="200"><br>
-    <strong>מטחנת קפה ידנית Comandante C40 MK3</strong><br>
-    • מחיר: כ-1,200 ₪<br>
-    • תיאור: מטחנה ידנית גרמנית עם סכינים מנירוסטה, ידועה בדיוק ובאיכות הטחינה שלה.
-`);
-
-grinders.push(`
-    <img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/OrphanEspressoLido3.png" alt="Orphan Espresso Lido 3" width="200"><br>
-    <strong>מטחנת קפה ידנית Orphan Espresso Lido 3</strong><br>
-    • מחיר: עד 1,300 ₪<br>
-    • תיאור: מטחנה ידנית מקצועית עם קוטר סכינים של 48 מ"מ, מתאימה לחובבי קפה המחפשים דיוק ואיכות.
-`);
-
             }
+            
             if (answers[1] === 'ידני' && answers[2] === 'עם חלב' && answers[3] === '1000₪-3000₪') {        
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/dedicaarte.png" alt="מכונת אספרסו Dedica Arte 885 - מכונה קומפקטית עם ידית הקצפה מקצועית"  width="200"><br>Delonghi - Dedica Arte 885 (מחיר: כ-1100₪, קומפקטית וקטנה, ידית הקצפה מקצועית, מגיע עם דוחסן מקצועי ידית אספרסו פשוטה, עובדת על לחץ, מיכל מים 1ל )');
                 results.push('<img src="https://raw.githubusercontent.com/nirnag/coffeemachines/main/GaggiaClassicPro.png" alt="מכונת אספרסו Gaggia Classic Pro - עיצוב איטלקי עם מיכל מים 2.1 ליטר" width="200"><br>Gaggia - Classic Pro (מחיר: כ-2,200₪, איטלקית איכותית, ידית הקצפה נירוסטה, פשוטה לשימוש, מיכל מים 2.1 ל )');            
