@@ -49,6 +49,8 @@
             height: auto !important;  /* Allow height to adjust dynamically */
             width: auto !important;
             margin-top: 20px;
+            min-width: 200px; /* הרוחב יהיה לפחות 200px */
+            min-height: 50px; /* הרוחב יהיה לפחות 200px */
             padding: 15px 35px;
             font-size: 18px;
             font-weight: bold;
@@ -88,14 +90,6 @@
     cursor: pointer;
 }
 
-        .accessibility-text {
-            font-size: 0.63em !important;
-            position: fixed;
-            bottom: 0px;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
         .high-contrast {
             background-color: black !important;
             color: yellow !important;
@@ -121,8 +115,8 @@
         
         .restart-btn {
     position: fixed;
-    bottom: 5px;
-    right: 5px;
+    top: 0px;
+    left: 5px;
     background: #8B5E3B; /* צבע קפה */
     color: white;
     padding: 15px 25px;
